@@ -23,7 +23,7 @@ namespace Ecommerce_Application
             }
 
             app.UseAuthorization();
-
+            app.UseAuthentication();
 
             app.MapControllers();
 
