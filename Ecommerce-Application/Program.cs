@@ -24,6 +24,7 @@ namespace Ecommerce_Application
 
             app.UseAuthorization();
             app.UseAuthentication();
+            app.UseStaticFiles();
 
             app.MapControllers();
 
