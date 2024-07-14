@@ -1,7 +1,7 @@
 name: Continious Interation And Development
 
 on:
-  push:
+  pull-request:
     branches:
       - main
 
