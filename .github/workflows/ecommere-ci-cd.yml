@@ -1,0 +1,23 @@
+name: Continious Interation And Development
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout out code 
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+        
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build app
+        run: dotnet build -c Release --no-restore
